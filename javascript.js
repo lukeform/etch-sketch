@@ -28,7 +28,7 @@ function destroyGrid(){
     
 }
 
-function createGrid(){
+function createGrid(theColor){
     let gridSize = prompt("Please choose a grid size (Less than 100 recommended)");
     console.log(gridSize)
     
@@ -43,13 +43,15 @@ function createGrid(){
         container.appendChild(row);
             for (x=0; x < gridSize; x++){
 
+                
+
                 let box = document.createElement("div");
                 box.classList.add("box");
                 box.style.backgroundColor = "white";
                 let opacity = box.style.opacity = 0.1;     
                 row.appendChild(box);
                 box.addEventListener("mouseover", () => {
-                    box.style.backgroundColor = "black";
+                    box.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
                     opacity = box.style.opacity = opacity + 0.1;});
 
             };
@@ -58,3 +60,4 @@ function createGrid(){
 
         
         }
+
