@@ -46,10 +46,10 @@ function createGrid(){
 
                 let box = document.createElement("div");
                 box.classList.add("box");
-                box.style.backgroundColor = "orange";     
+                box.style.backgroundColor = "white";     
                 row.appendChild(box);
                 box.addEventListener("mouseover", () => {
-                box.style.backgroundColor = "red";});
+                box.style.backgroundColor = "black";});
             };
          }
     
