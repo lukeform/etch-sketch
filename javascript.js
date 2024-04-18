@@ -39,16 +39,18 @@ function createGrid(){
         
         let row = document.createElement("div");
         row.classList.add("row");
-        row.style.backgroundColor = "blue";
+        row.style.backgroundColor = "white";
         container.appendChild(row);
             for (x=0; x < gridSize; x++){
 
                 let box = document.createElement("div");
                 box.classList.add("box");
-                box.style.backgroundColor = "white";     
+                box.style.backgroundColor = "white";
+                let opacity = box.style.opacity = 0.1;     
                 row.appendChild(box);
                 box.addEventListener("mouseover", () => {
-                    box.style.backgroundColor = "black";});
+                    box.style.backgroundColor = "black";
+                    opacity = box.style.opacity = opacity + 0.1;});
 
             };
          }
