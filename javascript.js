@@ -40,7 +40,6 @@ function createGrid(){
         let row = document.createElement("div");
         row.classList.add("row");
         row.style.backgroundColor = "blue";
-        textContent = "im a row";
         container.appendChild(row);
             for (x=0; x < gridSize; x++){
 
@@ -49,11 +48,11 @@ function createGrid(){
                 box.style.backgroundColor = "white";     
                 row.appendChild(box);
                 box.addEventListener("mouseover", () => {
-                box.style.backgroundColor = "black";});
+                    box.style.backgroundColor = "black";});
+
             };
          }
     
-         box.addEventListener("mouseover", () => {
-            box.style.backgroundColor = "red";});
+
         
         }
